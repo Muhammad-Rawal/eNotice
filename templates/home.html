@@ -1,0 +1,28 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to eNotice</title>
+    {% tailwind_css %}
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-lg mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-300 shadow-lg overflow-hidden">
+        <div class="p-8">
+            <h1 class="text-3xl text-center text-gray-800 dark:text-white font-semibold mb-8">Welcome to eNotice</h1>
+            <ul class="space-y-4">
+                <li>
+                    <a href="{% url 'admin:index' %}" class="block py-4 px-6 bg-blue-500 dark:bg-blue-600 text-white rounded-lg text-lg font-medium text-center transform transition-transform hover:scale-105 hover:bg-blue-600 hover:shadow-md dark:hover:bg-blue-700">Admin</a>
+                </li>
+                <li>
+                    <a href="{% url 'notices:home' %}" class="block py-4 px-6 bg-green-500 dark:bg-green-600 text-white rounded-lg text-lg font-medium text-center transform transition-transform hover:scale-105 hover:bg-green-600 hover:shadow-md dark:hover:bg-green-700">Students</a>
+                </li>
+                <li>
+                    <a href="{% url 'notices:new_notice' %}" class="block py-4 px-6 bg-indigo-500 dark:bg-indigo-600 text-white rounded-lg text-lg font-medium text-center transform transition-transform hover:scale-105 hover:bg-indigo-600 hover:shadow-md dark:hover:bg-indigo-700">Staff</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

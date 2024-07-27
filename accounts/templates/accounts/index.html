@@ -1,0 +1,62 @@
+{% extends 'accounts/accounts_layout.html' %} 
+{% block title %}User Details{% endblock %} {% block account_content %}
+
+<div class="bg-gray-900 text-white py-12 px-4 md:px-0">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">My Account</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 md:p-6 bg-gray-800 rounded-lg shadow-md">
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">User Name:</span> {{ user.username }}
+        </p>
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">First Name:</span> {{ user.first_name }}
+        </p>
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">Last Name:</span> {{ user.last_name }}
+        </p>
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">Email:</span> {{ user.email }}
+        </p>
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">User ID:</span> {{ user.id }}
+        </p>
+        <p class="text-lg mb-2">
+          <span class="text-gray-400">Last Login:</span> {{ user.last_login }}
+        </p>
+      </div>
+      <div class="relative hidden md:block">
+        <svg
+          class="absolute top-0 right-0 h-full w-full"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="100" cy="100" r="100" fill="rgba(29, 78, 216, 0.5)" />
+        </svg>
+        <div class="relative z-10 p-6 bg-gray-900 rounded-lg shadow-md">
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">User Name:</span> {{ user.username }}
+          </p>
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">First Name:</span> {{ user.first_name }}
+          </p>
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">Last Name:</span> {{ user.last_name }}
+          </p>
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">Email:</span> {{ user.email }}
+          </p>
+
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">User ID:</span> {{ user.id }}
+          </p>
+          <p class="text-lg mb-2">
+            <span class="text-gray-400">Last Login:</span> {{ user.last_login }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
